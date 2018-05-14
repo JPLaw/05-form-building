@@ -56,7 +56,7 @@
            6. Some way to know if this article is a draft or is published -->
            <form id="new-form">
             <label> 
-              <input type="text" id="article-text" placeholder="Article Title" required>
+              <input type="text" id="article-title" placeholder="Article Title" required>
             </label>
             <textarea id="article-body" cols="30" rows="10"></textarea>
             <label> 
@@ -69,7 +69,7 @@
               <input type="text" id="article-category" placeholder="Article Category" required>
             </label>
             <label>
-              <input type="checkbox" id="article-published">Published
+              <input type="checkbox" id="article-publishedOn">Published
             </label>
           </form>
       </section>
@@ -103,7 +103,7 @@
       //  Hint: Look in articleView.js for a function that does this.
       articleView.initNewArticlePage()
       // COMMENT: What is this function doing? Why do we need it?
-      // PUT YOUR RESPONSE HERE
+      // We have to put this function here in order to connect the js and html documents so it can render the new articles on the page. 
     </script>
   </body>
 </html>

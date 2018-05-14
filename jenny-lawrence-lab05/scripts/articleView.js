@@ -95,7 +95,7 @@ articleView.initNewArticlePage = () => {
 articleView.create = () => {
   // DONE: Set up a variable to hold the new article we are creating.
   // Clear out the #articles element, so we can put in the updated preview
-
+$('#articles').html('');
 
   // DONE: Instantiate an article based on what's in the form fields:
   let newArticle = new Article({
@@ -104,13 +104,13 @@ articleView.create = () => {
     title: $('#article-title').val(),
     category: $('#article-category').val(),
     body: $('#article-body').val(),
-    publishedOn: $('article-publishedOn:checked').length ? new Date() : null,
+    publishedOn: $('#article-publishedOn:checked').length ? new Date() : null,
 
   });
 
   // DONE: Use our interface to the Handblebars template to put this new article into the DOM:
-  newArticle.toHtml();
 
+  $('#articles').append(newArticle.toHtml());
   // Stretch Goal: Activate the highlighting of any code blocks; look at the documentation for hljs to see how to do this by placing a callback function in the .each():
   $('pre code').each();
 
@@ -123,7 +123,7 @@ articleView.create = () => {
 };
 
 // COMMENT: Where is this function called? Why?
-// PUT YOUR RESPONSE HERE
+// this is called in our index.html in order to render the filters (how to search for authors/categories) and appends the new articles to the page
 articleView.initIndexPage = () => {
   articles.forEach(article => $('#articles').append(article.toHtml()));
   articleView.populateFilters();
