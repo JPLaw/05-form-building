@@ -117,7 +117,7 @@ $('#articles').html('');
   // DONE: Show our export field, and export the new article as JSON, so it's ready to copy/paste into blogArticles.js:
   $('#article-export').show();
 
-  $('#article-json').attr( 'placeholder', JSON.stringify(newArticle));
+  $('#article-json').val(JSON.stringify(newArticle));
 
 
 };
